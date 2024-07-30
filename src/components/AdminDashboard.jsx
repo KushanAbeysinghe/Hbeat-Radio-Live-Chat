@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const socket = io('http://localhost:5000', { transports: ['websocket', 'polling', 'flashsocket'] });
+const socket = io('https://helloradio.lk', { transports: ['websocket', 'polling', 'flashsocket'] });
 
 const AdminDashboard = () => {
   const [data, setData] = useState([]);
