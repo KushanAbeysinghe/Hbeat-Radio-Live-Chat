@@ -18,7 +18,7 @@ const AdminDashboard = () => {
       navigate('/login');
     }
 
-    axios.get('http://localhost:5000/data').then(response => setData(response.data));
+    axios.get('https://helloradio.lk/data').then(response => setData(response.data));
 
     socket.on('dataUpdate', (newData) => {
       setData(prevData => [...prevData, newData]);
