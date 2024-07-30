@@ -29,7 +29,10 @@ const UserForm = () => {
     localStorage.setItem('location', location);
 
     try {
-      await axios.post('https://helloradio.lk/submit', { name, phone, location, message });
+      await axios.post('https://helloradio.lk/submit', 
+        { name, phone, location, message }, 
+        { withCredentials: true }
+      );
       setSubmitted(true);
       setMessage(''); // Clear only the message input field
       
