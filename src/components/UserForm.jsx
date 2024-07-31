@@ -29,10 +29,7 @@ const UserForm = () => {
     localStorage.setItem('location', location);
 
     try {
-      await axios.post('https://helloradio.lk/submit', 
-        { name, phone, location, message }, 
-        { withCredentials: true }
-      );
+      await axios.post('https://cors-anywhere.herokuapp.com/https://helloradio.lk/submit', { name, phone, location, message });
       setSubmitted(true);
       setMessage(''); // Clear only the message input field
       
